@@ -3,7 +3,8 @@ import sys
 from wit import Wit
  
 
-access_token= "MGMGAD7W5MP2CQNPMZWJWY7RVE4VPR3R"
+access_token= "" # wit.ai access token
+## Dictionary of jokes for different categories
 all_jokes = {
     'traditional': [
         'Rajnikanth counted to infinity - twice.',
@@ -61,11 +62,7 @@ all_jokes = {
 }
 def wit_response(sender_id, messaging_text):
     client.run_actions(session_id=sender_id, message=messaging_text)
-    #print request['entities']
-    #print type(request)
-    #request.update({'context':{}})
-    #print request
-
+    
 def first_entity_value(entities, entity):
     if entity not in entities:
        return None
